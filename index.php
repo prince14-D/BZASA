@@ -571,24 +571,4 @@
         </div>
     </section>
 
-    <?php include 'includes/footer.php'; ?>
-    
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/231770123456" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    
-    <!-- AI Assistant Float -->
-    <a href="ai-assistant.php" class="ai-float" title="AI Assistant">
-        <i class="fas fa-robot"></i>
-        <span class="ai-pulse"></span>
-    </a>
-    
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" title="Back to Top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
