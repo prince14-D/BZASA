@@ -3,6 +3,8 @@
  * Main JavaScript File
  */
 
+document.documentElement.classList.add('js');
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initMobileMenu();
@@ -48,8 +50,8 @@ function initHeroSlider() {
     
     const slides = slider.querySelectorAll('.slide');
     const dots = slider.querySelectorAll('.slider-dot');
-    const prevBtn = slider.querySelector('.slider-prev');
-    const nextBtn = slider.querySelector('.slider-next');
+    const prevBtn = slider.querySelector('.slider-prev, .slider-arrow.prev, .prev');
+    const nextBtn = slider.querySelector('.slider-next, .slider-arrow.next, .next');
     
     if (slides.length === 0) return;
     
@@ -122,7 +124,7 @@ function initHeroSlider() {
  * Scroll Animations (Fade-in effects)
  */
 function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const animatedElements = document.querySelectorAll('.animate-on-scroll, .fade-in');
     
     if (animatedElements.length === 0) return;
     
@@ -135,7 +137,7 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
+                entry.target.classList.add('animated', 'visible');
                 observer.unobserve(entry.target);
             }
         });

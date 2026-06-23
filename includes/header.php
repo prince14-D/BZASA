@@ -3,7 +3,27 @@
  * BZASA - Bendu Zinnah International School of Agriculture
  * Header Template
  */
+
+if (!defined('BZASA_DOCUMENT_STARTED')) {
+    define('BZASA_DOCUMENT_STARTED', true);
+    $page_title = $page_title ?? 'BZASA - Bendu Zinnah International School of Agriculture';
+    $page_description = $page_description ?? 'Bendu Zinnah International School of Agriculture provides practical agricultural training, entrepreneurship education, and student support.';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8'); ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars($page_description, ENT_QUOTES, 'UTF-8'); ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<?php } ?>
 
 <header>
     <div class="header-container">

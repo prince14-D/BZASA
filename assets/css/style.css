@@ -12,14 +12,19 @@
     --tertiary-color: #0066CC;
     --white: #FFFFFF;
     --light-bg: #F8F9FA;
+    --gray-light: #F8F9FA;
+    --gray-medium: #E5E7EB;
     --dark-bg: #1A1A2E;
+    --dark-color: #1A1A2E;
     --text-dark: #333333;
     --text-light: #666666;
     --text-muted: #999999;
     --border-color: #E5E7EB;
+    --shadow-small: 0 1px 4px rgba(0, 0, 0, 0.08);
     --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
     --shadow-medium: 0 5px 25px rgba(0, 0, 0, 0.15);
     --shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.2);
+    --shadow-large: 0 10px 40px rgba(0, 0, 0, 0.2);
     --transition: all 0.3s ease;
     --border-radius: 8px;
     --border-radius-lg: 16px;
@@ -1410,12 +1415,33 @@ footer {
    Animations
    ============================================ */
 .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.js .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
 .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.js .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.animate-on-scroll.animated {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1663,6 +1689,8 @@ footer {
     text-align: center;
     color: var(--white);
     overflow: hidden;
+    margin-top: 74px;
+    padding: 80px 20px;
 }
 
 .page-hero-bg {
